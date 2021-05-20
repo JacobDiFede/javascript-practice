@@ -8,7 +8,7 @@ const object = {
     no: false,
     count: 0,
     abc: 'abc',
-    name: 'Vinson',
+    name: 'Jacob',
     age: 39,
     isInstructor: true
 };
