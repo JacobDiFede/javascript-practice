@@ -1,6 +1,6 @@
 
 const area = 500;
-let intervalTime = 1000;
+let intervalTime = 2000;
 
 let score = 0;
 
@@ -18,7 +18,7 @@ moleImg.addEventListener('click', WhenMoleIsClicked)
 function WhenMoleIsClicked() {
     score = score + 1;
     console.log(score);
-    intervalTime = intervalTime - 100;
+    intervalTime = intervalTime - 50;
     clearInterval(interval);
     interval = setInterval(doLater, intervalTime);
 }
