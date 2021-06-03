@@ -1,5 +1,6 @@
 const rootUrl = 'http://api.tvmaze.com';
 
+
 const searchKeywordInput = document.createElement('input');
 document.body.appendChild(searchKeywordInput);
 const searchKeywordButton = document.createElement('button');
@@ -14,9 +15,14 @@ document.body.appendChild(searchPeopleButton);
 document.body.appendChild(showsList);
 
 
-searchKeywordButton.addEventListener('click', renderKeywordShows);
 
-searchPeopleButton.addEventListener('click', renderPeopleShows);
+
+searchKeywordButton.addEventListener('click', renderKeywordShows );
+
+searchPeopleButton.addEventListener('click', renderPeopleShows)
+
+
+
 
 function renderPeopleShows() {
     showsList.innerHTML = '';
@@ -25,6 +31,8 @@ function renderPeopleShows() {
         .forEach( item => renderPerson(item.person)));
 }
 
+
+
 function renderKeywordShows() {
     showsList.innerHTML = '';
     searchShowByKeyword(searchKeywordInput.value)
@@ -32,21 +40,25 @@ function renderKeywordShows() {
         .forEach( item => renderShow(item.show)));
 }
 
-function searchShowByPeople(person) {
-    const url = '/search/people?q=' + person;
-    return fetch(rootUrl + url)
-    .then( response => response.json())
-    .then( data => {console.log(data); return data});
-}
 
 function searchShowByKeyword(keyword) {
     const url = '/search/shows?q=' + keyword;
     return fetch(rootUrl + url)
     .then( response => response.json())
-    .then( data => {console.log(data); return data});
+    .then( data => { console.log(data); return data});
 }
 
+
+function searchShowByPeople(person) {
+    const url = '/search/people?q=' + person;
+    return fetch(rootUrl + url)
+    .then( response => response.json())
+    .then( data => { console.log(data); return data});
+}
+
+
 function renderShow(show) {
+    console.log('show')
     const mainLi = document.createElement('ul');
     const nameLi = document.createElement('li');
     const languageLi = document.createElement('li');
@@ -56,12 +68,13 @@ function renderShow(show) {
     mainLi.appendChild(languageLi);
     showsList.appendChild(mainLi);
     if (show.image) {
-        if (show.image) {
         addImage(show, mainLi)
     }
-} 
+}
 
 function renderPerson(person) {
+
+
     const mainLi = document.createElement('ul');
     const nameLi = document.createElement('li');
     nameLi.innerText = person.name;
@@ -74,7 +87,7 @@ function renderPerson(person) {
     }
 
 
-} 
+}
 
 
 function addImage(item, mainLi) {
@@ -82,7 +95,6 @@ function addImage(item, mainLi) {
         const img = document.createElement('img');
         mainLi.appendChild(img);
         img.src = item.image.original;
-        img.width = 200;
-
-    }
+        img.width = 100;
+ 
 }
