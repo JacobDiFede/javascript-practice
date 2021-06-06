@@ -73,8 +73,7 @@ function renderShow(show) {
 }
 
 function renderPerson(person) {
-
-
+    console.log('person')
     const mainLi = document.createElement('ul');
     const nameLi = document.createElement('li');
     nameLi.innerText = person.name;
