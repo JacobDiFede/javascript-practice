@@ -5,7 +5,7 @@ const searchKeywordInput = document.createElement('input');
 document.body.appendChild(searchKeywordInput);
 const searchKeywordButton = document.createElement('button');
 document.body.appendChild(searchKeywordButton);
-searchKeywordButton.innerText = 'Keyword Search';
+searchKeywordButton.innerText = 'Show Search';
 const showsList = document.createElement('div');
 const searchPeopleInput = document.createElement('input');
 document.body.appendChild(searchPeopleInput);
@@ -71,7 +71,7 @@ function renderShow(show) {
     mainLi.appendChild(languageLi);
     mainLi.appendChild(premiereLi);
     showsList.appendChild(mainLi);
-    
+
     if (show.image) {
         addImage(show, mainLi)
     }
