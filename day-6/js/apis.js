@@ -62,11 +62,16 @@ function renderShow(show) {
     const mainLi = document.createElement('ul');
     const nameLi = document.createElement('li');
     const languageLi = document.createElement('li');
+    const premiereLi = document.createElement('li');
     nameLi.innerText = show.name;
     languageLi.innerText = show.language;
+    premiereLi.innerText = show.premiered;
+
     mainLi.appendChild(nameLi);
     mainLi.appendChild(languageLi);
+    mainLi.appendChild(premiereLi);
     showsList.appendChild(mainLi);
+    
     if (show.image) {
         addImage(show, mainLi)
     }
@@ -76,9 +81,13 @@ function renderPerson(person) {
     console.log('person')
     const mainLi = document.createElement('ul');
     const nameLi = document.createElement('li');
+    const birthLi = document.createElement('li');
     nameLi.innerText = person.name;
+    birthLi.innerText = person.birthday;
+
     
     mainLi.appendChild(nameLi);
+    mainLi.appendChild(birthLi);
     showsList.appendChild(mainLi);
 
     if (person.image) {
