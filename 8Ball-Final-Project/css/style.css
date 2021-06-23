@@ -1,6 +1,16 @@
-H2 { text-align: center;}
-P {text-align: center;}
+H2 {
+    text-align: center;
+    color: blueviolet;
+}
+P {
+    text-align: center;
+    color: blueviolet;
+}
 div.answers {
     width: 200px;
     height: 200px;
+}
+#header-img img {
+    width: 100%;
+    height: auto;
 }
