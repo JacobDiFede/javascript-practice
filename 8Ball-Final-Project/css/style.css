@@ -1,3 +1,6 @@
 H2 { text-align: center;}
 P {text-align: center;}
-span {align-content: center;}
+div.answers {
+    width: 200px;
+    height: 200px;
+}
