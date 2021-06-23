@@ -34,3 +34,6 @@ questionButton.addEventListener( 'click', () => {
     const questionLog = question.value;
     console.log(questionLog);
 });
+
+// try to add favicon
+// try to replace img after running function
