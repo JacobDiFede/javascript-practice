@@ -7,8 +7,11 @@ P {
     color: blueviolet;
 }
 div.answers {
-    width: 200px;
-    height: 200px;
+    width: 900px;
+    height: 900px;
+    background-image: url('https://raw.githubusercontent.com/vinferno/js-intro-5-17-21/master/magic%20(1)/magic8ball_extra.png');
+    background-size: contain;
+
 }
 #header-img img {
     width: 100%;

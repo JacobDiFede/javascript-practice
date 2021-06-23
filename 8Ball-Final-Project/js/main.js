@@ -26,16 +26,13 @@ const integer = Math.floor(mixedNumber);
 const index = randomImage[integer];
 const answer = document.getElementById("answers");
 
-var img = document.createElement("img");
-img.src = (index);
-var src = document.getElementById("answers");
-src.appendChild(img);
+const questionButton = document.querySelector('#sendQuestion');
 
-// alert('Work in Progress!')
-
-// const questionButton = document.querySelector('#sendQuestion');
-
-// questionButton.addEventListener( 'click', () => {
-//     const questionLog = question.value;
-//     console.log(questionLog);
-// });
+questionButton.addEventListener( 'click', () => {
+    var img = document.createElement("img");
+    img.src = (index);
+    var src = document.getElementById("answers");
+    src.appendChild(img);
+    const questionLog = question.value;
+    console.log(questionLog);
+});
