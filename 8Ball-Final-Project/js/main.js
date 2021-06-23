@@ -20,15 +20,13 @@ randomImage[17] = "https://raw.githubusercontent.com/vinferno/js-intro-5-17-21/m
 randomImage[18] = "https://raw.githubusercontent.com/vinferno/js-intro-5-17-21/master/magic%20(1)/magic8ball_19.png";
 randomImage[19] = "https://raw.githubusercontent.com/vinferno/js-intro-5-17-21/master/magic%20(1)/magic8ball_20.png";
 
-const decimal = Math.random();
-const mixedNumber = decimal * 19;
-const integer = Math.floor(mixedNumber);
-const index = randomImage[integer];
-const answer = document.getElementById("answers");
-
 const questionButton = document.querySelector('#sendQuestion');
 
 questionButton.addEventListener( 'click', () => {
+    const decimal = Math.random();
+    const mixedNumber = decimal * 19;
+    const integer = Math.floor(mixedNumber);
+    const index = randomImage[integer];
     var img = document.createElement("img");
     img.src = (index);
     var src = document.getElementById("answers");
