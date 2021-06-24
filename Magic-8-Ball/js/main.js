@@ -25,6 +25,12 @@ const questionButton = document.querySelector('#sendQuestion');
 var img = document.createElement("img");
 
 questionButton.addEventListener( 'click', () => {
+    const questionLog = question.value;
+    console.log(questionLog);
+    if (!questionLog.includes('?')) {
+        alert('Please ask a question');
+        return
+    }
     const decimal = Math.random();
     const mixedNumber = decimal * 19;
     const integer = Math.floor(mixedNumber);
@@ -32,9 +38,4 @@ questionButton.addEventListener( 'click', () => {
     img.src = (index);
     var src = document.getElementById("answers");
     src.appendChild(img);
-    const questionLog = question.value;
-    console.log(questionLog);
 });
-
-// try to add favicon
-// try to replace img after running function
