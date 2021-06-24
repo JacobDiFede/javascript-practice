@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const number = 1.2;
+        const string = 'test';
+        const boolean = true;
+        const object = {
+            username: 'test user',
+            credit: 200
+        }
+        const array = [number, string, boolean, object];
+        const secondArray = [true, false];
+
+        const newArray = [...array, ...secondArray];
+
+        const { username, credit } = object;
+
+        console.log(username, credit);
+
+        const [test, second, ...third] = array;
+
+        console.log(test, second, third);
+
+        const user1 = {name: 'Jacob', phone: '555', score: 2};
+        const user2 = {name: 'Jacob', phone: '777'};
+
+        const newUser = {...user1, ...user2};
+
+        console.log(newArray)
+
+        function createUser(username, score, credit, age, city, state, zipcode) {
+            console.log(age)
+        }
+
+        createUser(...newArray);
+        console.log('test name', 0, 5, 0, null, null, 'Fresno')
+        function createNewUser({ username, score, credit, age, city, state, zipcode}) {
+            console.log(age);
+        }
+
+        createNewUser({age: 20, username: 'test'});
+        console.log(newUser)
+
+        console.log ([{name: 'Jacob'}, {name: 'test'}]
+        .map( user => {return {firstName: user.name}}).filter(x => x.firstName.includes))
+
+    </script>
+</body>
+</html>
